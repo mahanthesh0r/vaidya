@@ -14,9 +14,17 @@ app.get("/", (req, res) => {
 
 
 app.post('/next', (req, res) => {
-    const { step, ...data } = req.body;
+    const { step, action, ...data } = req.body;
     Object.assign(formData, data);
-    let nextStep = parseInt(step) + 1;
+    let nextStep = parseInt(step);
+
+    if (action === 'next') {
+        nextStep += 1;
+    } else if (action === 'back') {
+        nextStep -= 1;
+    } else if (action === 'submit') {
+        return res.send('Form Submitted'); 
+    }
     res.render('index', { step: nextStep, formData });
 });
 
