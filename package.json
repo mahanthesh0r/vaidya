@@ -7,15 +7,15 @@
     "build-css": "tailwindcss build -i styles/tailwindcss.css -o assets/styles.css",
     "watch-css": "tailwindcss build -i styles/tailwindcss.css -o assets/styles.css --watch",
     "dev": "npm run watch-css && npm start"
-   
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.8",
     "ejs": "^3.1.9",
     "express": "^4.19.2",
-    "watch": "^1.0.2"
+    "watch": "^0.13.0"
   },
   "devDependencies": {
     "autoprefix": "^1.0.1",
