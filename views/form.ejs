@@ -62,9 +62,9 @@
 
             <% } else if (step === 3) { %>
                 <div class="flex justify-center items-center">
-                    <h1 class="text-4xl text-black ">Select your Symptoms</h1>
+                    <%= console.log(formData.symptoms) %>
+                    <h1 class="text-4xl text-black "><%= formData.symptoms ? "Select your Symptoms" : "Select your illness" %></h1>
                 </div>
-                
                 <div class="relative group my-10">
                 <button id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500">
                     <span class="mr-2">Open Dropdown</span>
