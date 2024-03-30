@@ -59,14 +59,26 @@
                 </label>
             </div>
 
+            <% } else if (step === 3) { %>
+                <div class="flex justify-center items-center">
+                    <h1 class="text-4xl text-black ">Select your option</h1>
+                </div>
+                
+                <div class="my-5">
+                    <label for="dropdown" class="block mb-2 text-sm font-medium text-gray-900">Select an option</label>
+                    <select id="dropdown" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                        <% data.forEach(function(item) { %>
+                            <option value="<%= item.ID %>"><%= item.Name %></option>
+                        <% }); %>
+                    </select>
+                </div>
 
             <!-- <div class="mb-4">
                 <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
                 <input type="email" id="email" name="email" value="<%= formData.email || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div> -->
             <!-- More fields... -->
-        <% } else if (step === 3) { %>
-            
+        <% } else if (step === 4) { %>
             <div class="mb-4">
                 <p class="text-gray-700 text-sm font-bold">Name: <%= formData.name %></p>
                 <p class="text-gray-700 text-sm font-bold">Email: <%= formData.symptoms %></p>
@@ -77,7 +89,7 @@
             <% if (step > 1) { %>
                 <button type="submit" name="action" value="back" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Back</button>
             <% } %>
-            <% if (step < 3) { %>
+            <% if (step < 4) { %>
                 <button type="submit" name="action" value="next" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Next</button>
             <% } else { %>
                 <button type="submit" name="action" value="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
