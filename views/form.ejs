@@ -75,8 +75,9 @@
                   <div id="dropdown-menu" class="hidden absolute justify-center w-full mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1 max-h-60 overflow-auto">
                     <!-- Search input -->
                     <input id="search-input" name="selectedOption" class="block w-full px-4 py-2 text-gray-800 border rounded-md  border-gray-300 focus:outline-none" type="text" placeholder="Search items" autocomplete="off">
+                    <input id="hidden-search-input" name="selectedOptionID" class="block w-full px-4 py-2 text-gray-800 border rounded-md  border-gray-300 focus:outline-none" type="hidden" placeholder="Search items" autocomplete="off">
                     <% data.forEach(function(item) { %>
-                    <a  name="<%= item.ID %>" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md" onclick="selectedOption('<%= item.Name %>')"><%= item.Name %></a>
+                    <a  name="<%= item.ID %>" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md" onclick="selectedOption(`<%= item.Name %>`,` <%= item.ID %>`)"><%= item.Name %></a>
                     <% }); %>
                 </div>
               
@@ -161,6 +162,7 @@
         const dropdownButton = document.getElementById('dropdown-button');
         const dropdownMenu = document.getElementById('dropdown-menu');
         const searchInput = document.getElementById('search-input');
+        const hiddenSearchInput = document.getElementById('hidden-search-input');
         let isOpen = true; // Set to true to open the dropdown by default
         
         // Function to toggle the dropdown state
@@ -192,12 +194,14 @@
           });
         });
 
-        function selectedOption(itemName) {
-            console.log(itemName);
+        function selectedOption(itemName, itemID) {
             toggleDropdown();
             dropdownButton.innerHTML = itemName;
             searchInput.value = itemName;
             searchInput.innerHTML = itemName;
+            hiddenSearchInput.value = itemID;
+            hiddenSearchInput.innerHTML = itemID
+            console.log("Item ID", itemID)
         }
 
     </script>
