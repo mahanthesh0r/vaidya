@@ -74,15 +74,24 @@ app.post('/next', async (req, res) => {
 });
 
 app.get('/diagnosis', async (req, res) => {
-    let symptomsID = [10];
+    let symptomsID = [formData.selectedOptionID];
     let diagnosisList = [];
 
 try {
     const response = await axios.get(BASE_URL + "/diagnosis", {
+        // params: {
+        //     symptoms: JSON.stringify([10]),
+        //     gender: "Male",
+        //     year_of_birth: JSON.stringify(1997),
+        //     token : api_key,
+        //     format: "json",
+        //     language: "en-gb"
+        // }
+
         params: {
-            symptoms: JSON.stringify([10]),
-            gender: "Male",
-            year_of_birth: JSON.stringify(1997),
+            symptoms: JSON.stringify(symptomsID),
+            gender: formData.gender,
+            year_of_birth: formData.age,
             token : api_key,
             format: "json",
             language: "en-gb"

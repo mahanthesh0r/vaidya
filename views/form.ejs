@@ -49,10 +49,10 @@
                 </label>
             
                 <label class="w-6/12">
-                    <input type="radio" id="illness "value="illness" class="peer hidden" name="illness">
+                    <input type="radio" id="illness" value="illness" class="peer hidden" disabled name="illness">
                     
                     <div class="hover:bg-gray-50 flex items-center justify-between px-4 py-2 border-2 rounded-lg cursor-pointer text-sm border-gray-200 group peer-checked:border-blue-500">
-                        <h2 class="font-medium text-gray-700">illness</h2>
+                        <h2 class="font-medium text-gray-700">illness (Coming Soon)</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9 text-blue-600 invisible group-[.peer:checked+&]:visible">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
@@ -63,7 +63,7 @@
             <% } else if (step === 3) { %>
                 <div class="flex justify-center items-center">
                    
-                    <h1 class="text-4xl text-black "><%= formData.symptoms ? "Select your Symptoms" : "Select your illness" %></h1>
+                    <h1 class="text-4xl text-black "><%= formData.symptoms ? "Select your Symptoms" : "Select your illness (coming soon)" %></h1>
                 </div>
                 <div class="relative group my-10">
                 <button id="dropdown-button"  class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500">
@@ -149,7 +149,10 @@
                 <button type="submit" name="action" value="back" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Back</button>
             <% } %>
             <% if (step < 4) { %>
-                <button type="submit" name="action" value="next" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Next</button>
+
+                <button type="submit" name="action" value="next" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Next
+                </button>
             <% } else { %>
                 <!-- <button type="submit" name="action" value="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button> -->
                 <button type="submit" name="action" value="submit" class="gradient-button text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1">Submit</button>

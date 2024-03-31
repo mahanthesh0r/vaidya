@@ -797,6 +797,10 @@ video {
   height: auto;
 }
 
+.h-px {
+  height: 1px;
+}
+
 .max-h-60 {
   max-height: 15rem;
 }
@@ -967,6 +971,11 @@ video {
   white-space: nowrap;
 }
 
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -993,6 +1002,10 @@ video {
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-0 {
+  border-width: 0px;
 }
 
 .border-t {
@@ -1556,6 +1569,11 @@ dialog::backdrop {
 
   .dark\:bg-white\/5 {
     background-color: rgb(255 255 255 / 0.05);
+  }
+
+  .dark\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
 
   .dark\:from-blue-400 {
