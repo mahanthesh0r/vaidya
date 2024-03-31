@@ -125,15 +125,16 @@
                     <% diagnosisList.forEach(diagnosis=> { %>
                         <div class="py-6 px-6 rounded-xl border border-gray-200 bg-white">
                             <h5 class="text-xl text-gray-700">
-                                <%= diagnosis.Issue.Name %>
+                            Ranking: <%= diagnosis.Issue.Ranking %>
                             </h5>
                             <div class="my-8">
                                 <h1 class="text-5xl font-bold text-gray-800">
-                                    <%= diagnosis.Issue.Accuracy %>
+                                    <%= diagnosis.Issue.Name %>
                                 </h1>
-                                <span class="text-gray-500">Accuracy</span>
+                                <!-- <span class="text-gray-500"><%= diagnosis.Issue.Ranking %></span> -->
                             </div>
                             <!-- Circular Progress with Percentage Text -->
+                            <div class="grid grid-cols-2 gap-2">
                             <div class="relative size-40">
                                 <svg class="size-full" width="36" height="36" viewBox="0 0 36 36"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -162,10 +163,15 @@
                                 <!-- Percentage Text -->
                                 <div class="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
                                     <span
-                                        class="text-center text-2xl font-bold text-gray-800 dark:text-black"><%= diagnosis.Issue.Accuracy %></span>
+                                        class="text-center text-2xl font-bold text-gray-800 dark:text-black"><%= diagnosis.Issue.Accuracy %>%</span>
                                 </div>
                             </div>
                             <!-- End Circular Progress -->
+                            <div>
+                                <h1 class="truncate ..."><strong>ICD ID:</strong> <%= diagnosis.Issue.Icd %> </h1>
+                                <h1 class="truncate ..."><strong>ICD Name:</strong> <%= diagnosis.Issue.IcdName %> </h1>
+                            </div>
+                        </div>
 
                             <table class="mt-6 -mb-2 w-full text-gray-600">
                                 <thead>
@@ -177,8 +183,8 @@
                                 <tbody>
                                     <% diagnosis.Specialisation.forEach(specialise => { %>
                                     <tr>                                        
-                                        <td class="text-gray-500"><%= specialise.ID %></td>
-                                        <td class="py-2"><%= specialise.Name %></td>
+                                        <td class="text-gray-500 text-center"><%= specialise.ID %></td>
+                                        <td class="py-2 text-center"><%= specialise.Name %></td>
                                         <td>
                                             <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
