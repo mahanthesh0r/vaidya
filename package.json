@@ -6,7 +6,8 @@
     "start": "nodemon server.js -e ejs",
     "build-css": "tailwindcss build -i styles/tailwindcss.css -o assets/styles.css",
     "watch-css": "tailwindcss build -i styles/tailwindcss.css -o assets/styles.css --watch",
-    "dev": "npm run watch-css && npm start"
+    "dev": "npm run watch-css && npm start",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -22,9 +23,11 @@
   "devDependencies": {
     "autoprefix": "^1.0.1",
     "autoprefixer": "^10.4.19",
+    "jest": "^29.7.0",
     "nodemon": "^3.1.0",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
+    "supertest": "^6.3.4",
     "tailwindcss": "^3.4.3"
   }
 }
