@@ -3,6 +3,9 @@ const app = express()
 const path = require("path");
 const axios = require('axios')
 const dotenv = require('dotenv');
+const serverless = require('serverless-http');
+
+
 const NodeCache = require('node-cache');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -124,4 +127,4 @@ const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-module.exports = app;
+module.exports.handler = serverless(app);
