@@ -33,3 +33,5 @@ To get a local copy up and running, follow these simple steps.
 
 - start the application 
 ` npm start `
+
+Visit http://localhost:8000/
