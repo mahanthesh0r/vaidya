@@ -43,3 +43,9 @@ Visit http://localhost:8000/
 - In the root directory run 
 ` npm test `
 
+
+### Future Work
+- Implement illness based seach queries
+- Implement /issues API to populate illness details in the modal
+- Handle Routes and Redirects 
+
