@@ -13,3 +13,23 @@ Vaidya is a personal home doctor web application designed to bring healthcare di
 To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
+
+- npm
+- Nodejs Latest 
+- .env file (Have E-mailed it to InternshipSF@supplyframe.com) If need a copy contact mahantheshr28@gmail.com
+
+### Installation 
+
+- Clone the repo
+` git clone https://github.com/mahanthesh0r/vaidya.git `
+
+- cd into the project 
+` cd vaidya `
+
+- Install the packages 
+` npm install `
+
+- Make sure the .env file is present in the project root directory
+
+- start the application 
+` npm start `

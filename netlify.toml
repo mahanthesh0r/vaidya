@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build-css"
+  command = "node ./build.js"
   functions = "netlify-functions"
   publish = "assets"
 
