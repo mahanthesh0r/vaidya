@@ -51,7 +51,7 @@ Visit http://localhost:8000/
 - Figure out a way to deploy the EJS to cloud platform like Vercel/netlify 
 
 ## What new did I Learn? 
-- This was my first time using EJS, It very simple and very handy especially for server-side rendering.
+- This was my first time using EJS, It was very easy to learn and pretty handy especially for server-side rendering.
 - Im very used to React / Next. Building something without those frameworks was pretty taxing ( maybe i'm wrong )
 - The APIMedic is amazing! I love how they provide dev and prod environment. They have some really look api with some really cool feartures.
 - Apprently, deploying EJS application on cloud platforms like Vercel/netlify is super complicated. Very little information on how to do it. 
