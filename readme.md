@@ -1,6 +1,6 @@
 # Vaidya
 
-Vaidya is a personal home doctor web application designed to bring healthcare diagnostics to the comfort of your home. Built with EJS, TailwindCSS, and ExpressJS, it offers a user-friendly interface for individuals to input their symptoms and receive potential diagnoses along with the accuracy of these diagnostics and the type of specialist they should consult.
+Vaidya (Meaning Doctor in Kannada) is a personal home doctor web application designed to bring healthcare diagnostics to the comfort of your home. Built with EJS, TailwindCSS, and ExpressJS, it offers a user-friendly interface for individuals to input their symptoms and receive potential diagnoses along with the accuracy of these diagnostics and the type of specialist they should consult.
 
 ## Features
 
