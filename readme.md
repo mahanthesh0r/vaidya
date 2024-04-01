@@ -8,7 +8,7 @@ Vaidya is a personal home doctor web application designed to bring healthcare di
 - **Diagnosis Suggestion**: Based on the input symptoms, Vaidya suggests the most probable illness the user might be facing, including the accuracy of this suggestion.
 - **Specialization Recommendation**: The app recommends the type of medical specialization required for treatment, helping users seek the appropriate healthcare professional.
 
-- All the move features are implemented using APImedic free API. To know more click here https://apimedic.com/
+- All the above features are implemented using APImedic free API. To know more click here https://apimedic.com/
 
 ## Getting Started
 
